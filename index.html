@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow: hidden; /* Hide overflow to prevent scrolling */
         }
         .container {
             padding: 50px;
@@ -40,6 +41,19 @@
         }
         .bold {
             font-weight: bold;
+        }
+        /* Sparkle animation */
+        @keyframes sparkle {
+            0% {transform: translateY(0);}
+            100% {transform: translateY(-100vh);}
+        }
+        .sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            box-shadow: 0 0 2px white, 0 0 10px white;
+            animation: sparkle 1s linear infinite;
         }
     </style>
 </head>
@@ -81,25 +95,52 @@
         <p class="blinking" style="animation: blink 1s infinite;">Upcoming projects. Stay tuned!</p>
     </div>
 
+    <!-- Sparkles -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.container');
+            const width = container.offsetWidth;
+            const height = container.offsetHeight;
+
+            // Create sparkles
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * width + 'px';
+                sparkle.style.top = Math.random() * height + 'px';
+                container.appendChild(sparkle);
+            }
+        });
+    </script>
+
     <style>
+        /* Blink animation */
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0; }
             100% { opacity: 1; }
         }
-    </style>
 
-    <script>
-        // JavaScript to handle scrolling to section
-        document.addEventListener('click', function(e) {
-            if (e.target.classList.contains('section')) {
-                e.preventDefault();
-                var targetId = e.target.getAttribute('href').substring(1);
-                var targetSection = document.getElementById(targetId);
-                targetSection.style.display = 'block';
-                targetSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        });
-    </script>
+        /* Sparkles animation */
+        @keyframes sparkle {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100vh); }
+        }
+
+        /* Make the page not scrollable */
+        body {
+            overflow: hidden;
+        }
+
+        /* Style for sparkles */
+        .sparkle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: white;
+            box-shadow: 0 0 2px white, 0 0 10px white;
+            animation: sparkle 1s linear infinite;
+        }
+    </style>
 </body>
 </html>
