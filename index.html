@@ -13,7 +13,6 @@
             text-align: center;
         }
         .container {
-            position: relative;
             padding: 50px;
         }
         h1 {
@@ -42,19 +41,6 @@
         .bold {
             font-weight: bold;
         }
-        /* Sparkle animation */
-        @keyframes sparkle {
-            0% { opacity: 1; transform: translateY(0); }
-            100% { opacity: 0; transform: translateY(-100vh); }
-        }
-        .sparkle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background-color: white;
-            box-shadow: 0 0 2px white, 0 0 10px white;
-            animation: sparkle 2s linear infinite;
-        }
     </style>
 </head>
 <body>
@@ -65,8 +51,6 @@
         <a href="#aboutme" class="section">About Me</a>
         <a href="#skills" class="section">Skills-Set</a>
         <a href="#projects" class="section">Projects</a>
-        <!-- Sparkles -->
-        <div class="sparkles"></div>
     </div>
 
     <div id="aboutme" style="display: none;">
@@ -97,21 +81,13 @@
         <p class="blinking" style="animation: blink 1s infinite;">Upcoming projects. Stay tuned!</p>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.querySelector('.container');
-            const width = container.offsetWidth;
-            const height = container.offsetHeight;
-
-            // Create sparkles
-            for (let i = 0; i < 20; i++) {
-                const sparkle = document.createElement('div');
-                sparkle.className = 'sparkle';
-                sparkle.style.left = Math.random() * width + 'px';
-                sparkle.style.top = Math.random() * height + 'px';
-                container.appendChild(sparkle);
-            }
-        });
-    </script>
+    <style>
+        /* Blink animation */
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
 </body>
 </html>
