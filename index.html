@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashray J Pardeshi's Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light gray background */
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            padding: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .section {
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .section:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .red {
+            color: red;
+        }
+        .bold {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="file:///C:/Users/ashra/OneDrive/Pictures/image.avif" alt="Profile Picture" style="width: 200px; border-radius: 50%;">
+        <h1>Hey, this is <span class="red">Ashray J Pardeshi</span>.</h1>
+        <p>I am a DevOps Engineer.</p>
+        <a href="#skills" class="section">Skills-Set</a>
+        <a href="#projects" class="section">Projects</a>
+        <a href="#aboutme" class="section">About Me</a>
+    </div>
+
+    <div id="skills" style="display: none;">
+        <h2>Skills-Set:</h2>
+        <ul>
+            <li>Jenkins</li>
+            <li>Ansible</li>
+            <li>Docker</li>
+            <li>Terraform</li>
+            <li>Kubernetes</li>
+            <li>Git</li>
+            <li>Linux</li>
+            <li>AWS</li>
+            <!-- Add more skills here -->
+        </ul>
+    </div>
+
+    <div id="projects" style="display: none;">
+        <h2>Projects:</h2>
+        <p>Upcoming projects. Stay tuned!</p>
+    </div>
+
+    <div id="aboutme" style="display: none;">
+        <h2>About Me:</h2>
+        <p>Hey there! I'm <span class="red">Ashray Pardeshi</span>, a passionate DevOps Engineer with over 4.6 years of experience in the field. My journey started back in 2018 when I began my career as a Network Engineer. During my time in networking, I stumbled upon DevOps and found it incredibly fascinating.</p>
+        <p>What I love most is getting my hands dirty with practical work. I'm a troubleshooter at heart and thrive in solving complex problems. Whether it's debugging code or optimizing workflows, I'm always up for a challenge.</p>
+        <p>Recently, I embarked on a new adventure by starting my own YouTube channel. On this channel, I'll be sharing my learnings and insights with the community. I believe that knowledge should be shared, and if I can help even one person on their journey, it's all worth it.</p>
+        <p>Feel free to check out my YouTube channel <a href="https://www.youtube.com/@Ask_Ash_Devops_IT" target="_blank" class="bold">Ask Ash Devops IT</a> and join me in this exciting journey!</p>
+    </div>
+
+    <script>
+        // JavaScript to handle scrolling to section
+        document.addEventListener('DOMContentLoaded', function() {
+            var sectionLinks = document.querySelectorAll('.section');
+
+            sectionLinks.forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var targetId = this.getAttribute('href').substring(1);
+                    var targetSection = document.getElementById(targetId);
+                    targetSection.style.display = 'block';
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
