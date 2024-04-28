@@ -69,9 +69,18 @@
     </div>
 
     <div id="projects" style="display: none;">
-        <h2>Projects:</h2>
-        <p class="blinking">Upcoming projects. Stay tuned!</p>
-    </div>
+    <h2>Projects:</h2>
+    <p class="blinking" style="animation: blink 1s infinite;">Upcoming projects. Stay tuned!</p>
+</div>
+
+<style>
+    @keyframes blink {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+
 
     <div id="aboutme" style="display: none;">
         <h2>About Me:</h2>
