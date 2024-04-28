@@ -82,12 +82,24 @@
     </div>
 
     <style>
-        /* Blink animation */
         @keyframes blink {
             0% { opacity: 1; }
             50% { opacity: 0; }
             100% { opacity: 1; }
         }
     </style>
+
+    <script>
+        // JavaScript to handle scrolling to section
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('section')) {
+                e.preventDefault();
+                var targetId = e.target.getAttribute('href').substring(1);
+                var targetSection = document.getElementById(targetId);
+                targetSection.style.display = 'block';
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    </script>
 </body>
 </html>
