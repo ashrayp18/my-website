@@ -5,164 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashray J Pardeshi's Webpage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0; /* Light gray background */
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        .container {
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        .section {
-            display: inline-block;
-            margin-top: 20px;
-            cursor: pointer;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        .section:hover {
-            background-color: #0056b3; /* Darker blue on hover */
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        .red {
-            color: red;
-        }
-        .bold {
-            font-weight: bold;
-        }
-        .pdf-container {
-            width: 90%; /* Adjust the width of the PDF container */
-            height: 80vh; /* Adjust the height of the PDF container */
-            position: relative;
-            overflow: auto;
-            margin-top: 20px; /* Adjust the margin as needed */
-        }
-        .pdf-container iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        table {
-            width: 90%; /* Adjust the table width as needed */
-            margin: 0 auto; /* Center the table horizontally */
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-        th, td {
-            padding: 8px;
-            border: 1px solid #ddd;
-            white-space: nowrap; /* Prevent text wrapping */
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        .project-name {
-            max-width: 200px; /* Adjust the maximum width of the project name */
-            overflow: hidden;
-            text-overflow: ellipsis; /* Show ellipsis for long names */
-            vertical-align: top; /* Align the project name to the top */
-        }
-        .description {
-            max-width: 300px; /* Adjust the maximum width of the description */
-            overflow: hidden;
-            text-overflow: ellipsis; /* Show ellipsis for long descriptions */
-            vertical-align: top; /* Align the description to the top */
-        }
-        .view-button {
-            background-color: #4CAF50; /* Green */
-            border: none;
-            color: white;
-            padding: 8px 12px;
-            text-align: center;
-            text-decoration: none;
-            display: block; /* Display the button as block */
-            margin: 0 auto; /* Center the button horizontally */
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-top: 10px; /* Adjust the top margin as needed */
-        }
-        .pdf-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        .pdf-viewer {
-            width: 90%; /* Adjust the width of the PDF viewer */
-            height: 90%; /* Adjust the height of the PDF viewer */
-            background-color: white;
-            border-radius: 5px;
-            overflow: auto;
-            padding: 20px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #ddd;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+        /* Your existing CSS styles */
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="image.avif" alt="Profile Picture" style="width: 200px; border-radius: 50%;">
-        <h1>Hey, this is <span class="red">Ashray J Pardeshi</span>.</h1>
-        <p>I am a DevOps Engineer.</p>
-        <a href="javascript:void(0)" onclick="toggleSection('aboutme')" class="section">About Me</a>
-        <a href="javascript:void(0)" onclick="toggleSection('skills')" class="section">Skills-Set</a>
-        <a href="javascript:void(0)" onclick="toggleSection('projects')" class="section">Projects</a>
-    </div>
-
-    <div id="aboutme" style="display: none;">
-        <h2>About Me:</h2>
-        <!-- About Me section content -->
-        <p>Hey there! I'm <span class="red">Ashray Pardeshi</span>, a passionate DevOps Engineer with over 4.6 years of experience in the field. My journey started back in 2018 when I began my career as a Network Engineer. During my time in networking, I stumbled upon DevOps and found it incredibly fascinating.</p>
-        <p>What I love most is getting my hands dirty with practical work. I'm a troubleshooter at heart and thrive in solving complex problems. Whether it's debugging code or optimizing workflows, I'm always up for a challenge.</p>
-        <p>Recently, I embarked on a new adventure by starting my own YouTube channel. On this channel, I'll be sharing my learnings and insights with the community. I believe that knowledge should be shared, and if I can help even one person on their journey, it's all worth it.</p>
-        <p>Feel free to check out my YouTube channel <a href="https://www.youtube.com/@Ask_Ash_Devops_IT" target="_blank" class="bold">Ask Ash Devops IT</a> and join me in this exciting journey!</p>
-    </div>
-
-    <div id="skills" style="display: none;">
-        <h2>Skills-Set:</h2>
-        <!-- Skills section content -->
-        <ul>
-            <li>Jenkins</li>
-            <li>Ansible</li>
-            <li>Docker</li>
-            <li>Terraform</li>
-            <li>Kubernetes</li>
-            <li>Git</li>
-            <li>Linux</li>
-            <li>AWS</li>
-            <!-- Add more skills here -->
-        </ul>
-    </div>
+    <!-- Your existing HTML content -->
 
     <div id="projects" style="display: none;">
         <h2>Projects:</h2>
@@ -186,7 +33,21 @@
                     <button class="view-button" onclick="togglePDFViewer('Pipeline-Jenkins-Ansible-Docker.pdf')">View</button>
                 </td>
             </tr>
-            <!-- Add more projects with buttons as needed -->
+            <!-- New projects -->
+            <tr>
+                <td class="project-name">Installing Jenkins as a Server</td>
+                <td class="description">Setting up Jenkins as a web server.</td>
+                <td>
+                    <button class="view-button" onclick="togglePDFViewer('How_to_Setup_Jenkins-as-web-server.pdf')">View</button>
+                </td>
+            </tr>
+            <tr>
+                <td class="project-name">CICD Pipeline, Code Build on Master, Deploy on two Slave</td>
+                <td class="description">Creating a CI/CD pipeline where code is built on the master and deployed on two slave machines.</td>
+                <td>
+                    <button class="view-button" onclick="togglePDFViewer('Pipeline_Build_on_Master_&_Deployed_on_two_slave.pdf')">View</button>
+                </td>
+            </tr>
         </table>
         <div class="pdf-overlay" id="pdfOverlay">
             <div class="pdf-viewer" id="pdfViewer">
@@ -197,28 +58,7 @@
     </div>
 
     <script>
-        function toggleSection(sectionId) {
-            var section = document.getElementById(sectionId);
-            if (section.style.display === 'none') {
-                section.style.display = 'block';
-            } else {
-                section.style.display = 'none';
-            }
-        }
-        
-        function togglePDFViewer(pdfPath) {
-            var pdfFrame = document.getElementById('pdfFrame');
-            pdfFrame.src = pdfPath;
-            var pdfOverlay = document.getElementById('pdfOverlay');
-            pdfOverlay.style.display = 'flex';
-        }
-
-        function closePDFViewer() {
-            var pdfOverlay = document.getElementById('pdfOverlay');
-            pdfOverlay.style.display = 'none';
-            var pdfFrame = document.getElementById('pdfFrame');
-            pdfFrame.src = '';
-        }
+        // Your existing JavaScript functions
     </script>
 </body>
 </html>
